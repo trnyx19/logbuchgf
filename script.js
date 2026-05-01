@@ -141,12 +141,18 @@ document.addEventListener('DOMContentLoaded', function() {
         'linear-gradient(135deg, #2d5016 0%, #1a3a0a 100%)',
         'linear-gradient(135deg, #6b2d0a 0%, #3a1a05 100%)',
         'linear-gradient(135deg, #4a0e0e 0%, #2a0a0a 100%)',
-        'linear-gradient(135deg, #2d2d4a 0%, #1a1a2e 100%)'
+        'linear-gradient(135deg, #2d2d4a 0%, #1a1a2e 100%)',
+        'linear-gradient(135deg, #1a4a6b 0%, #0a2a4b 100%)',
+        'linear-gradient(135deg, #6b4a2d 0%, #3a2a1a 100%)',
+        'linear-gradient(135deg, #4a2d6b 0%, #2a1a3a 100%)',
+        'linear-gradient(135deg, #6b6b2d 0%, #4a4a1a 100%)',
+        'linear-gradient(135deg, #2d6b6b 0%, #1a3a3a 100%)'
     ];
     
     colorButtons.forEach((btn, index) => {
         btn.addEventListener('click', function() {
             document.body.style.background = colors[index];
+            localStorage.setItem('backgroundColor', colors[index]);
             colorPickerModal.classList.add('hidden');
         });
     });
@@ -184,6 +190,12 @@ document.addEventListener('DOMContentLoaded', function() {
             errorModal.classList.add('hidden');
         }
     });
+    
+    // Hintergrundfarbe beim Laden wiederherstellen
+    const savedBgColor = localStorage.getItem('backgroundColor');
+    if (savedBgColor) {
+        document.body.style.background = savedBgColor;
+    }
     
     // Dark Mode beim Laden wiederherstellen
     const savedTheme = localStorage.getItem('theme');
