@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Erstes Abenteuer",
+    "date": "2026-05-01",
+    "text": "Dies ist mein erstes Logbuch-Eintrag. Die Website ist nun fertig und lädt Einträge aus dieser JSON-Datei. Man kann neue Einträge hinzufügen, indem man einfach neue Objekte in dieses Array einfügt."
+  },
+  {
+    "title": "Webentwicklung ist toll",
+    "date": "2026-04-28",
+    "text": "Heute habe ich eine schöne Retro-Website im Windows-XP-Stil gebaut. Das Design erinnert mich an gute alte Zeiten. Alle Einträge werden automatisch aus der entries.json Datei geladen."
+  },
+  {
+    "title": "Wichtige Notiz",
+    "date": "2026-04-25",
+    "text": "Um neue Einträge hinzuzufügen, bearbeite einfach diese entries.json Datei.\n\nFolgendes Format verwenden:\n{\n  \"title\": \"Titel des Eintrags\",\n  \"date\": \"YYYY-MM-DD\",\n  \"text\": \"Der Text des Eintrags\"\n}"
+  },
+  {
+    "title": "Deployment vorbereitet",
+    "date": "2026-04-20",
+    "text": "Diese Website kann einfach auf Render.com deployt werden. Einfach das GitHub-Repository mit Render verbinden und es wird automatisch bereitgestellt. Keine Datenbank oder komplexe Konfiguration nötig!"
+  }
+]

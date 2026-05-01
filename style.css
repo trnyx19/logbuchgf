@@ -1,0 +1,249 @@
+/* ============================================
+   WINDOWS XP RETRO STYLE LOGBUCH
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a7fb0 0%, #0f5f8f 100%);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.desktop {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ============================================
+   WINDOW STYLING
+   ============================================ */
+
+.window {
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    box-shadow: 1px 1px 0 #ffffff inset, 2px 2px 0 #dfdfdf inset, 1px 1px 0 #000000;
+}
+
+/* Titlebar */
+.titlebar {
+    background: linear-gradient(90deg, #0a7fb0 0%, #0f5f8f 100%);
+    color: white;
+    padding: 2px 2px 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.titlebar-text {
+    flex-grow: 1;
+}
+
+.titlebar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.titlebar-button {
+    width: 18px;
+    height: 18px;
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #ffffff #0a0a0a #0a0a0a #ffffff;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    padding: 0;
+}
+
+.titlebar-button:active {
+    border-color: #0a0a0a #ffffff #ffffff #0a0a0a;
+}
+
+.titlebar-button.close:hover {
+    background: #c00000;
+    color: white;
+}
+
+/* Window Body */
+.window-body {
+    background: #e0e0e0;
+}
+
+/* Menu Bar */
+.menu-bar {
+    display: flex;
+    background: #e0e0e0;
+    border-bottom: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 2px;
+    gap: 4px;
+}
+
+.menu-item {
+    padding: 3px 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-size: 11px;
+}
+
+.menu-item:hover {
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+.menu-item:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* Toolbar */
+.toolbar {
+    background: #e0e0e0;
+    border-bottom: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 4px;
+    display: flex;
+    gap: 2px;
+}
+
+.toolbar-button {
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 3px 8px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toolbar-button:hover {
+    border-color: #dfdfdf #606060 #606060 #dfdfdf;
+}
+
+.toolbar-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    padding: 4px 7px 2px 9px;
+}
+
+/* Content Area */
+.content {
+    padding: 12px;
+    background: #e0e0e0;
+    min-height: 400px;
+}
+
+.content h1 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #000080;
+}
+
+/* Entries Container */
+.entries-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Entry Card */
+.entry {
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 8px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.entry-title {
+    font-weight: bold;
+    color: #000080;
+    font-size: 12px;
+}
+
+.entry-date {
+    color: #666;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.entry-text {
+    color: #000;
+    line-height: 1.4;
+    font-size: 11px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.no-entries {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Statusbar */
+.statusbar {
+    background: #e0e0e0;
+    border-top: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 2px 2px;
+    font-size: 11px;
+    color: #000;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 600px) {
+    .window {
+        max-width: 100%;
+    }
+
+    .content {
+        min-height: auto;
+    }
+
+    .entry-title {
+        font-size: 11px;
+    }
+
+    .entry-text {
+        font-size: 10px;
+    }
+}
