@@ -1,26 +1,8 @@
 [
   {
-    "title": "Erstes Abenteuer",
+    "title": "Halli Hallo Hallöchen",
     "date": "2026-05-01",
-    "text": "Dies ist mein erstes Logbuch-Eintrag. Die Website ist nun fertig und lädt Einträge aus dieser JSON-Datei.",
-    "abgelehnt": false
-  },
-  {
-    "title": "Webentwicklung ist toll",
-    "date": "2026-04-28",
-    "text": "Heute habe ich eine schöne Retro-Website im Windows-XP-Stil gebaut. Das Design erinnert mich an gute alte Zeiten.",
-    "abgelehnt": true
-  },
-  {
-    "title": "Wichtige Notiz",
-    "date": "2026-04-25",
-    "text": "Um neue Einträge hinzuzufügen, bearbeite einfach diese entries.json Datei.",
+    "text": "Auf dieser Seite werden ab jetzt die schlechtesten Freundschaftsanfragen die an mich gehen aufgelistet, vielleicht bald die Option auch welche einzusenden",
     "abgelehnt": null
-  },
-  {
-    "title": "Deployment vorbereitet",
-    "date": "2026-04-20",
-    "text": "Diese Website kann einfach auf Render.com deployt werden. Keine Datenbank oder komplexe Konfiguration nötig!",
-    "abgelehnt": false
   }
 ]
