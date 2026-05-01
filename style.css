@@ -177,6 +177,30 @@ body {
     border: 2px solid;
     border-color: #ffffff #808080 #808080 #ffffff;
     padding: 8px;
+    position: relative;
+}
+
+.entry-stamp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 4px 8px;
+    transform: rotate(-15deg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.entry-stamp.angenommen {
+    color: #00a000;
+    border-color: #00a000;
+}
+
+.entry-stamp.abgelehnt {
+    color: #c00000;
+    border-color: #c00000;
 }
 
 .entry-header {

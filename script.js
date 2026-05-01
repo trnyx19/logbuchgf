@@ -48,6 +48,7 @@ function createEntryElement(entry) {
     const title = entry.title || 'Untitled';
     const date = entry.date || 'Kein Datum';
     const text = entry.text || '';
+    const abgelehnt = entry.abgelehnt;
     
     // Formatiere das Datum wenn möglich
     let formattedDate = date;
@@ -64,7 +65,17 @@ function createEntryElement(entry) {
         // Verwende das Original-Datum bei Fehler
     }
     
+    // Erstelle Stempel basierend auf abgelehnt Wert
+    let stampHtml = '';
+    if (abgelehnt === true) {
+        stampHtml = '<div class="entry-stamp abgelehnt">Abgelehnt</div>';
+    } else if (abgelehnt === false) {
+        stampHtml = '<div class="entry-stamp angenommen">Angenommen</div>';
+    }
+    // Wenn abgelehnt null/undefined ist, kein Stempel
+    
     entryDiv.innerHTML = `
+        ${stampHtml}
         <div class="entry-header">
             <div class="entry-title">${escapeHtml(title)}</div>
             <div class="entry-date">${escapeHtml(formattedDate)}</div>
