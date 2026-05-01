@@ -11,7 +11,7 @@
 body {
     background: linear-gradient(135deg, #0a7fb0 0%, #0f5f8f 100%);
     font-family: Tahoma, Arial, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     color: #000;
     min-height: 100vh;
     display: flex;
@@ -94,15 +94,15 @@ body {
     background: #e0e0e0;
     border-bottom: 2px solid;
     border-color: #dfdfdf #808080 #808080 #dfdfdf;
-    padding: 2px;
-    gap: 4px;
+    padding: 4px;
+    gap: 6px;
 }
 
 .menu-item {
-    padding: 3px 8px;
+    padding: 4px 12px;
     cursor: pointer;
     border: 2px solid transparent;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .menu-item:hover {
@@ -119,18 +119,18 @@ body {
     background: #e0e0e0;
     border-bottom: 2px solid;
     border-color: #dfdfdf #808080 #808080 #dfdfdf;
-    padding: 4px;
+    padding: 6px;
     display: flex;
-    gap: 2px;
+    gap: 4px;
 }
 
 .toolbar-button {
     background: #e0e0e0;
     border: 2px solid;
     border-color: #ffffff #808080 #808080 #ffffff;
-    padding: 3px 8px;
+    padding: 4px 12px;
     font-family: Tahoma, Arial, sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     cursor: pointer;
     user-select: none;
 }
@@ -146,14 +146,14 @@ body {
 
 /* Content Area */
 .content {
-    padding: 12px;
+    padding: 16px;
     background: #e0e0e0;
     min-height: 400px;
 }
 
 .content h1 {
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 18px;
+    margin-bottom: 16px;
     color: #000080;
 }
 
@@ -161,14 +161,15 @@ body {
 .entries-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .loading {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     color: #666;
     font-style: italic;
+    font-size: 13px;
 }
 
 /* Entry Card */
@@ -176,21 +177,24 @@ body {
     background: #e0e0e0;
     border: 2px solid;
     border-color: #ffffff #808080 #808080 #ffffff;
-    padding: 8px;
+    padding: 12px;
+    padding-right: 100px;
     position: relative;
+    overflow: hidden;
 }
 
 .entry-stamp {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 11px;
+    top: 8px;
+    right: 8px;
+    font-size: 13px;
     font-weight: bold;
     border: 2px solid;
-    padding: 2px 4px;
+    padding: 3px 6px;
     transform: rotate(-15deg);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .entry-stamp.angenommen {
@@ -205,35 +209,37 @@ body {
 
 .entry-header {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
+    flex-direction: column;
+    margin-bottom: 8px;
 }
 
 .entry-title {
     font-weight: bold;
     color: #000080;
-    font-size: 12px;
+    font-size: 14px;
+    margin-bottom: 4px;
 }
 
 .entry-date {
     color: #666;
-    font-size: 10px;
+    font-size: 11px;
     font-style: italic;
 }
 
 .entry-text {
     color: #000;
-    line-height: 1.4;
-    font-size: 11px;
+    line-height: 1.5;
+    font-size: 12px;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
 .no-entries {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     color: #666;
     font-style: italic;
+    font-size: 13px;
 }
 
 /* Statusbar */
