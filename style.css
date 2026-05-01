@@ -178,23 +178,24 @@ body {
     border: 2px solid;
     border-color: #ffffff #808080 #808080 #ffffff;
     padding: 12px;
-    padding-right: 100px;
+    padding-right: 120px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .entry-stamp {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    font-size: 13px;
+    top: -5px;
+    right: -15px;
+    font-size: 18px;
     font-weight: bold;
-    border: 2px solid;
-    padding: 3px 6px;
-    transform: rotate(-15deg);
+    border: 3px solid;
+    padding: 5px 10px;
+    transform: rotate(-20deg);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     white-space: nowrap;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
 }
 
 .entry-stamp.angenommen {
