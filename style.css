@@ -227,6 +227,211 @@ body {
 }
 
 /* ============================================
+   MODALS & DIALOGS
+   ============================================ */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+/* Color Picker Modal */
+.modal-content {
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: 1px 1px 0 #ffffff inset, 2px 2px 0 #dfdfdf inset, 1px 1px 0 #000000;
+    padding: 12px;
+    min-width: 300px;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #000080;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+.color-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.color-btn {
+    background: linear-gradient(135deg, #0a7fb0 0%, #0f5f8f 100%) !important;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    height: 60px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.color-btn:hover {
+    border-color: #dfdfdf #606060 #606060 #dfdfdf;
+}
+
+.color-btn:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* Error Dialog */
+.error-dialog {
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: 1px 1px 0 #ffffff inset, 2px 2px 0 #dfdfdf inset, 1px 1px 0 #000000;
+    min-width: 280px;
+}
+
+.error-titlebar {
+    background: linear-gradient(90deg, #c00000 0%, #800000 100%);
+    color: white;
+    padding: 2px 4px;
+    font-weight: bold;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+.error-content {
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.error-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.error-text {
+    font-size: 11px;
+    color: #000;
+}
+
+.error-buttons {
+    padding: 8px 12px;
+    border-top: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.error-button {
+    background: #e0e0e0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 3px 12px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    min-width: 50px;
+}
+
+.error-button:hover {
+    border-color: #dfdfdf #606060 #606060 #dfdfdf;
+}
+
+.error-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+body.dark-mode .window {
+    background: #3a3a3a;
+}
+
+body.dark-mode .titlebar {
+    background: linear-gradient(90deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+body.dark-mode .window-body {
+    background: #3a3a3a;
+}
+
+body.dark-mode .menu-bar {
+    background: #3a3a3a;
+    border-color: #4a4a4a #2a2a2a #2a2a2a #4a4a4a;
+}
+
+body.dark-mode .menu-item {
+    color: #e0e0e0;
+}
+
+body.dark-mode .menu-item:hover {
+    background: #4a4a4a;
+}
+
+body.dark-mode .toolbar {
+    background: #3a3a3a;
+    border-color: #4a4a4a #2a2a2a #2a2a2a #4a4a4a;
+}
+
+body.dark-mode .toolbar-button {
+    background: #3a3a3a;
+    border-color: #5a5a5a #1a1a1a #1a1a1a #5a5a5a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .toolbar-button:hover {
+    border-color: #6a6a6a #0a0a0a #0a0a0a #6a6a6a;
+}
+
+body.dark-mode .content {
+    background: #3a3a3a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .content h1 {
+    color: #88ccff;
+}
+
+body.dark-mode .entry {
+    background: #3a3a3a;
+    border-color: #5a5a5a #1a1a1a #1a1a1a #5a5a5a;
+}
+
+body.dark-mode .entry-title {
+    color: #88ccff;
+}
+
+body.dark-mode .entry-date {
+    color: #aaa;
+}
+
+body.dark-mode .entry-text {
+    color: #e0e0e0;
+}
+
+body.dark-mode .statusbar {
+    background: #3a3a3a;
+    border-color: #4a4a4a #2a2a2a #2a2a2a #4a4a4a;
+    color: #e0e0e0;
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 

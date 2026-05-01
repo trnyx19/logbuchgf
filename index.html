@@ -23,10 +23,9 @@
             <!-- Window Content -->
             <div class="window-body">
                 <div class="menu-bar">
-                    <div class="menu-item">Datei</div>
-                    <div class="menu-item">Bearbeiten</div>
-                    <div class="menu-item">Ansicht</div>
-                    <div class="menu-item">Hilfe</div>
+                    <div class="menu-item" id="menu-datei">Datei</div>
+                    <div class="menu-item" id="menu-ansicht">Ansicht</div>
+                    <div class="menu-item" id="menu-hilfe">Hilfe</div>
                 </div>
 
                 <div class="toolbar">
@@ -47,6 +46,34 @@
             <!-- Statusbar -->
             <div class="statusbar">
                 <span>Bereit</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup für Hintergrundauswahl -->
+    <div id="color-picker-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-title">Hintergrundfarbe ändern</div>
+            <div class="color-options">
+                <button class="color-btn" style="background: linear-gradient(135deg, #0a7fb0 0%, #0f5f8f 100%);">Blau</button>
+                <button class="color-btn" style="background: linear-gradient(135deg, #2d5016 0%, #1a3a0a 100%);">Grün</button>
+                <button class="color-btn" style="background: linear-gradient(135deg, #6b2d0a 0%, #3a1a05 100%);">Braun</button>
+                <button class="color-btn" style="background: linear-gradient(135deg, #4a0e0e 0%, #2a0a0a 100%);">Rot</button>
+                <button class="color-btn" style="background: linear-gradient(135deg, #2d2d4a 0%, #1a1a2e 100%);">Dunkel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Dialog -->
+    <div id="error-modal" class="modal hidden">
+        <div class="error-dialog">
+            <div class="error-titlebar">ERROR</div>
+            <div class="error-content">
+                <div class="error-icon">⚠️</div>
+                <div class="error-text">Dies ist ein Fehler!</div>
+            </div>
+            <div class="error-buttons">
+                <button class="error-button" id="close-error">OK</button>
             </div>
         </div>
     </div>

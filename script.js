@@ -109,4 +109,74 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Menü-Items Funktionalität
+    const menuDatei = document.getElementById('menu-datei');
+    const menuAnsicht = document.getElementById('menu-ansicht');
+    const menuHilfe = document.getElementById('menu-hilfe');
+    const colorPickerModal = document.getElementById('color-picker-modal');
+    const errorModal = document.getElementById('error-modal');
+    const closeErrorBtn = document.getElementById('close-error');
+    
+    // Datei - Hintergrundfarbe ändern
+    menuDatei.addEventListener('click', function() {
+        colorPickerModal.classList.remove('hidden');
+    });
+    
+    // Color Buttons
+    const colorButtons = document.querySelectorAll('.color-btn');
+    const colors = [
+        'linear-gradient(135deg, #0a7fb0 0%, #0f5f8f 100%)',
+        'linear-gradient(135deg, #2d5016 0%, #1a3a0a 100%)',
+        'linear-gradient(135deg, #6b2d0a 0%, #3a1a05 100%)',
+        'linear-gradient(135deg, #4a0e0e 0%, #2a0a0a 100%)',
+        'linear-gradient(135deg, #2d2d4a 0%, #1a1a2e 100%)'
+    ];
+    
+    colorButtons.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            document.body.style.background = colors[index];
+            colorPickerModal.classList.add('hidden');
+        });
+    });
+    
+    // Modal schließen bei Klick außerhalb
+    colorPickerModal.addEventListener('click', function(e) {
+        if (e.target === colorPickerModal) {
+            colorPickerModal.classList.add('hidden');
+        }
+    });
+    
+    // Ansicht - Dark Mode Toggle
+    menuAnsicht.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        // Speichere die Einstellung
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+    
+    // Hilfe - Error Dialog
+    menuHilfe.addEventListener('click', function() {
+        errorModal.classList.remove('hidden');
+    });
+    
+    closeErrorBtn.addEventListener('click', function() {
+        errorModal.classList.add('hidden');
+    });
+    
+    // Error Modal schließen bei Klick außerhalb
+    errorModal.addEventListener('click', function(e) {
+        if (e.target === errorModal) {
+            errorModal.classList.add('hidden');
+        }
+    });
+    
+    // Dark Mode beim Laden wiederherstellen
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
 });
