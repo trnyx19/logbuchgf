@@ -148,9 +148,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Menü-Items Funktionalität
     const menuDatei = document.getElementById('menu-datei');
     const menuAnsicht = document.getElementById('menu-ansicht');
-    const menuHilfe = document.getElementById('menu-hilfe');
+    const menuEinsendung = document.getElementById('menu-einsendung');
+    const menuBeschwerde = document.getElementById('menu-beschwerde');
     const colorPickerModal = document.getElementById('color-picker-modal');
     const errorModal = document.getElementById('error-modal');
+    const beschwerde = document.getElementById('beschwerde-modal');
+    const beschwerdeLink = document.getElementById('beschwerde-link-input');
+    const beschwerdeOkBtn = document.getElementById('beschwerde-ok');
     const closeErrorBtn = document.getElementById('close-error');
     
     // Datei - Hintergrundfarbe ändern
@@ -200,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Hilfe - Error Dialog
-    menuHilfe.addEventListener('click', function() {
+    menuEinsendung.addEventListener('click', function() {
         errorModal.classList.remove('hidden');
     });
     
@@ -217,6 +221,42 @@ document.addEventListener('DOMContentLoaded', function() {
     errorModal.addEventListener('click', function(e) {
         if (e.target === errorModal) {
             errorModal.classList.add('hidden');
+        }
+    });
+    
+    // Beschwerde Dialog
+    menuBeschwerde.addEventListener('click', function() {
+        beschwerdeLink.value = '';
+        beschwerde.classList.remove('hidden');
+        beschwerdeLink.focus();
+    });
+    
+    beschwerdeOkBtn.addEventListener('click', function() {
+        const link = beschwerdeLink.value.trim();
+        if (link) {
+            // Überprüfe ob der Link mit http:// oder https:// beginnt
+            let url = link;
+            if (!link.startsWith('http://') && !link.startsWith('https://')) {
+                url = 'https://' + link;
+            }
+            window.open(url, '_blank');
+            beschwerde.classList.add('hidden');
+        } else {
+            alert('Bitte geben Sie einen Link ein.');
+        }
+    });
+    
+    // Beschwerde Modal schließen bei Klick außerhalb
+    beschwerde.addEventListener('click', function(e) {
+        if (e.target === beschwerde) {
+            beschwerde.classList.add('hidden');
+        }
+    });
+    
+    // Link auch mit Enter-Taste öffnen
+    beschwerdeLink.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            beschwerdeOkBtn.click();
         }
     });
     

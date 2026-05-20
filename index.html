@@ -25,7 +25,8 @@
                 <div class="menu-bar">
                     <div class="menu-item" id="menu-datei">Hintergrund</div>
                     <div class="menu-item" id="menu-ansicht">Ansicht</div>
-                    <div class="menu-item" id="menu-hilfe">Einsendung</div>
+                    <div class="menu-item" id="menu-einsendung">Einsendung</div>
+                    <div class="menu-item" id="menu-beschwerde">Beschwerde</div>
                 </div>
 
                 <div class="toolbar">
@@ -76,7 +77,7 @@
                 <div class="error-text">https://forms.gle/568DSytA9TspPDUj8</div>
             </div>
             <div class="error-buttons">
-                <button class="error-button" id="close-error">OK</button>
+                <button class="error-button" id="close-error">ÖFFNEN</button>
             </div>
         </div>
     </div>
@@ -91,6 +92,20 @@
             <div class="maintenance-content">
                 <p>Unsere Website ist am <strong>27. Mai zwischen 03:00 Uhr und 04:00 Uhr</strong> aufgrund geplanter Wartungsarbeiten des Hosts (render.com) vorübergehend möglicherweise eingeschränkt oder nicht erreichbar.</p>
                 <p>Vielen Dank für euer Verständnis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beschwerde Dialog -->
+    <div id="beschwerde-modal" class="modal hidden">
+        <div class="dialog">
+            <div class="dialog-titlebar">Beschwerde</div>
+            <div class="dialog-content">
+                <label for="beschwerde-link-input">Link:</label>
+                <input type="text" id="beschwerde-link-input" placeholder="https://example.com" />
+            </div>
+            <div class="dialog-buttons">
+                <button class="dialog-button" id="beschwerde-ok">ÖFFNEN</button>
             </div>
         </div>
     </div>
