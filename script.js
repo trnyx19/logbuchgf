@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     beschwerdeOkBtn.addEventListener('click', function() {
         // Link aus dem Dialog extrahieren
-        const linkText = document.querySelector('.beschwerde-text').textContent;
+        const linkText = document.querySelector('#beschwerde-modal .error-text').textContent;
         if (linkText) {
             window.open(linkText, '_blank');
         }

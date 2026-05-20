@@ -356,22 +356,6 @@ body {
     color: #000;
 }
 
-.error-text-input {
-    font-size: 11px;
-    color: #000;
-    border: 2px solid;
-    border-color: #ffffff #808080 #808080 #ffffff;
-    padding: 4px 6px;
-    font-family: Tahoma, Arial, sans-serif;
-    background: #ffffff;
-    width: 250px;
-}
-
-.error-text-input:focus {
-    outline: none;
-    border-color: #0a7fb0 #0a7fb0 #0a7fb0 #0a7fb0;
-}
-
 .error-buttons {
     padding: 8px 12px;
     border-top: 1px solid #dfdfdf;
