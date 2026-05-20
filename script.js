@@ -181,6 +181,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     closeErrorBtn.addEventListener('click', function() {
+        // Link aus dem Dialog extrahieren
+        const linkText = document.querySelector('.error-text').textContent;
+        if (linkText) {
+            window.open(linkText, '_blank');
+        }
         errorModal.classList.add('hidden');
     });
     
