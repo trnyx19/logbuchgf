@@ -2,6 +2,9 @@
 // LOGBUCH - JAVASCRIPT
 // ============================================
 
+// Konfiguration - Wartungsmitteilung anzeigen (true/false)
+const SHOW_MAINTENANCE_MESSAGE = true;
+
 // Laden und Anzeigen der Logbuch-Einträge
 async function loadEntries() {
     try {
@@ -101,6 +104,27 @@ function displayError(message) {
 
 // Starten wenn DOM fertig ist
 document.addEventListener('DOMContentLoaded', loadEntries);
+
+// Wartungsmitteilung anzeigen
+document.addEventListener('DOMContentLoaded', function() {
+    if (SHOW_MAINTENANCE_MESSAGE) {
+        const maintenanceModal = document.getElementById('maintenance-modal');
+        const closeMaintenanceBtn = document.getElementById('close-maintenance');
+        
+        maintenanceModal.classList.remove('hidden');
+        
+        closeMaintenanceBtn.addEventListener('click', function() {
+            maintenanceModal.classList.add('hidden');
+        });
+        
+        // Modal schließen bei Klick außerhalb
+        maintenanceModal.addEventListener('click', function(e) {
+            if (e.target === maintenanceModal) {
+                maintenanceModal.classList.add('hidden');
+            }
+        });
+    }
+});
 
 // Toolbar-Buttons Funktionalität
 document.addEventListener('DOMContentLoaded', function() {
