@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const colorPickerModal = document.getElementById('color-picker-modal');
     const errorModal = document.getElementById('error-modal');
     const beschwerde = document.getElementById('beschwerde-modal');
-    const beschwerdeLink = document.getElementById('beschwerde-link-input');
     const beschwerdeOkBtn = document.getElementById('beschwerde-ok');
     const closeErrorBtn = document.getElementById('close-error');
     
@@ -226,37 +225,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Beschwerde Dialog
     menuBeschwerde.addEventListener('click', function() {
-        beschwerdeLink.value = '';
         beschwerde.classList.remove('hidden');
-        beschwerdeLink.focus();
     });
     
     beschwerdeOkBtn.addEventListener('click', function() {
-        const link = beschwerdeLink.value.trim();
-        if (link) {
-            // Überprüfe ob der Link mit http:// oder https:// beginnt
-            let url = link;
-            if (!link.startsWith('http://') && !link.startsWith('https://')) {
-                url = 'https://' + link;
-            }
-            window.open(url, '_blank');
-            beschwerde.classList.add('hidden');
-        } else {
-            alert('Bitte geben Sie einen Link ein.');
+        // Link aus dem Dialog extrahieren
+        const linkText = document.querySelector('.beschwerde-text').textContent;
+        if (linkText) {
+            window.open(linkText, '_blank');
         }
+        beschwerde.classList.add('hidden');
     });
     
     // Beschwerde Modal schließen bei Klick außerhalb
     beschwerde.addEventListener('click', function(e) {
         if (e.target === beschwerde) {
             beschwerde.classList.add('hidden');
-        }
-    });
-    
-    // Link auch mit Enter-Taste öffnen
-    beschwerdeLink.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            beschwerdeOkBtn.click();
         }
     });
     
