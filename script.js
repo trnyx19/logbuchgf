@@ -3,7 +3,7 @@
 // ============================================
 
 // Konfiguration - Wartungsmitteilung anzeigen (true/false)
-const SHOW_MAINTENANCE_MESSAGE = true;
+const SHOW_MAINTENANCE_MESSAGE = false;
 
 // Laden und Anzeigen der Logbuch-Einträge
 async function loadEntries() {
